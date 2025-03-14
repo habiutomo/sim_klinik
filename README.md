@@ -46,4 +46,3 @@ The application will start on port 5000 with the frontend being served through V
 
 ## License
 Silahkan email habizinnia@gmail.com - jika butuh repo ini
-Copyright © 2024. All rights reserved.
