@@ -3,7 +3,7 @@
 
 A web-based medical clinic management system built with React, Express, and TypeScript.
 
-![alt text](1.png)
+![alt text](image.png)
 
 ## Features
 
