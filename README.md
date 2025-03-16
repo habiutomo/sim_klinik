@@ -2,7 +2,7 @@
 
 A comprehensive solution for managing clinical practices, patients, and appointments efficiently.
 
-![alt text](1.png)
+![alt text](image.png)
 ![alt text](satusehat.png)
 
 
