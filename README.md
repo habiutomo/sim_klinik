@@ -1,164 +1,86 @@
-# SIM Klinik - Clinical Management System
+# Sistem Manajemen Fasilitas Kesehatan
 
-A comprehensive solution for managing clinical practices, patients, and appointments efficiently.
+Aplikasi manajemen fasilitas kesehatan berbasis web yang dirancang untuk memenuhi kebutuhan layanan kesehatan di fasilitas kesehatan tingkat pertama. Sistem ini menyediakan antarmuka yang intuitif untuk manajemen pasien, antrian, farmasi, dan integrasi dengan SATUSEHAT.
 
-![alt text](image.png)
-![alt text](satusehat.png)
+## Fitur Utama
 
+### 1. Manajemen Pengguna
+- Multi-role user (Frontline, Dokter, Perawat, Apoteker, Kasir, Keuangan)
+- Autentikasi dan otorisasi berbasis peran
+- Antarmuka yang responsif dengan dukungan mode gelap/terang
 
-## Features
+### 2. Manajemen Pasien
+- Pendaftaran pasien baru
+- Pencarian dan pengelolaan data pasien
+- Integrasi dengan SATUSEHAT untuk sinkronisasi data pasien
 
-### 1. User Authentication
-- Multi-role authentication system (admin, doctor, nurse, patient)
-- Secure login and registration
-- Role-based access control
+### 3. Sistem Antrian
+- Antrian real-time dengan WebSocket
+- Prioritas antrian
+- Status dan pembaruan antrian secara langsung
 
-### 2. Dashboard
-- Overview of clinic activities
-- Key metrics and statistics
-- Recent patient visits
-- Upcoming appointments
+### 4. Manajemen Farmasi
+- Inventaris obat
+- Pemantauan stok
+- Pencatatan transaksi farmasi
 
-### 3. Patient Management
-- Patient registration and records
-- Medical history tracking
-- Search and filter capabilities
-- Electronic Health Records (EHR)
+### 5. Pembayaran dan Keuangan
+- Pencatatan pembayaran
+- Laporan keuangan harian
+- Pemantauan transaksi
 
-### 4. Appointment System
-- Schedule management
-- Appointment status tracking
-- Doctor availability calendar
-- Patient scheduling interface
+### 6. Integrasi SATUSEHAT
+- Konfigurasi kredensial SATUSEHAT
+- Sinkronisasi data pasien
+- Pertukaran data kesehatan sesuai standar FHIR
 
-### 5. Staff Management
-- Doctor and staff profiles
-- Specialization tracking
-- Schedule management
-- Contact information
+## Teknologi
 
-### 6. SATUSEHAT Integration
-- Connectivity with Indonesia's Healthcare Information System
-- Secure credential management
-- Data synchronization capabilities
-- Compliance with healthcare standards
-
-## Technology Stack
-
-- **Frontend**: React with TypeScript
+- **Frontend**: React, TailwindCSS, shadcn/ui
 - **Backend**: Express.js
-- **State Management**: TanStack Query (React Query)
-- **UI Components**: shadcn/ui
-- **Styling**: Tailwind CSS
-- **Authentication**: Passport.js
-- **Forms**: React Hook Form with Zod validation
+- **Database**: PostgreSQL (via Drizzle ORM)
+- **Real-time**: WebSocket
+- **Autentikasi**: Passport.js
+- **API Integration**: SATUSEHAT FHIR API
 
-## Getting Started
+## Instalasi dan Penggunaan
 
-### Prerequisites
-- Node.js >= 20
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone <repository-url>
-cd sim-klinik
-```
-
-2. Install dependencies
+1. Clone repositori
+2. Install dependensi:
 ```bash
 npm install
 ```
 
-3. Start the development server
+3. Konfigurasi environment variables:
+```env
+SESSION_SECRET=your_session_secret
+DATABASE_URL=your_database_url
+```
+
+4. Jalankan aplikasi:
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5000`
-
-## User Roles
-
-### Admin
-- System configuration
-- User management
-- SATUSEHAT integration setup
-- Access to all features
-
-### Doctor
-- View and manage appointments
-- Access patient records
-- Update medical records
-- Set availability
-
-### Nurse
-- Patient registration
-- Basic record management
-- Appointment scheduling
-- Patient coordination
-
-### Patient
-- View personal medical records
-- Schedule appointments
-- Update personal information
-- View appointment history
-
-## SATUSEHAT Integration
-
-### Setup Requirements
-- SATUSEHAT Client ID
-- Client Secret
-- Organization ID
-- Valid healthcare provider credentials
-
-### Configuration
-1. Log in as an admin
-2. Navigate to Settings > SATUSEHAT Integration
-3. Enter the required credentials
-4. Enable the integration
-
-## Development
-
-### Project Structure
+5. Buka aplikasi di browser:
 ```
-sim-klinik/
-├── client/           # Frontend React application
-├── server/           # Backend Express server
-├── shared/           # Shared types and schemas
-└── public/           # Static assets
+http://localhost:5000
 ```
 
-### Key Files
-- `schema.ts`: Data models and validation
-- `auth.ts`: Authentication logic
-- `routes.ts`: API endpoints
-- `storage.ts`: Data storage interface
+## Konfigurasi SATUSEHAT
 
-### Development Guidelines
-1. Follow TypeScript best practices
-2. Use React Query for data fetching
-3. Implement proper error handling
-4. Maintain consistent code formatting
-5. Write clear commit messages
+1. Dapatkan kredensial SATUSEHAT:
+   - Client ID
+   - Client Secret
+   - Organization ID
 
-## Security
+2. Masuk ke sistem sebagai admin
+3. Buka menu Pengaturan
+4. Masukkan kredensial SATUSEHAT
+5. Simpan konfigurasi
 
-- Password hashing using scrypt
-- Session-based authentication
-- Role-based access control
-- Secure credential storage
-- API route protection
+## Lisensi
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
+MIT License
 
 habizinnia@gmail.com
