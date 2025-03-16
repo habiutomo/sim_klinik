@@ -4,6 +4,9 @@ Aplikasi manajemen fasilitas kesehatan berbasis web yang dirancang untuk memenuh
 
 ## Fitur Utama
 
+![Alt text](image.png)
+![Alt text](satusehat.png)
+
 ### 1. Manajemen Pengguna
 - Multi-role user (Frontline, Dokter, Perawat, Apoteker, Kasir, Keuangan)
 - Autentikasi dan otorisasi berbasis peran
